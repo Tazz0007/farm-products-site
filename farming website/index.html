@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cape Town Farm Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cape Town Farm Products</h1>
+            <nav>
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+                <ul id="mobileMenu" class="mobile-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Organic Mulch, Compost, and Firewood</h2>
+            <p>Your source for sustainable and high-quality farm products in Cape Town.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <h3>Organic Compost</h3>
+                    <p>Enrich your soil with our organic compost, perfect for gardens and farms.</p>
+                    <img src="compost.jpg" alt="Organic Compost" class="thumbnail" onclick="showImage('compost-large.jpg')">
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="product">
+                    <h3>Sustainable Mulch</h3>
+                    <p>Protect and nourish your plants with our eco-friendly mulch.</p>
+                    <img src="mulch.jpg" alt="Sustainable Mulch" class="thumbnail" onclick="showImage('mulch-large.jpg')">
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="product">
+                    <h3>Firewood</h3>
+                    <p>Premium firewood, seasoned and ready for use in your home or business.</p>
+                    <img src="firewood.jpg" alt="Firewood" class="thumbnail" onclick="showImage('firewood-large.jpg')">
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Pricing Example -->
+        <div class="pricing">
+            <h3>Order Firewood</h3>
+            <p>Price per unit: $10</p>
+            <input type="number" id="quantity" value="1" min="1" onchange="calculateTotal()">
+            <p>Total Price: $<span id="totalPrice">10</span></p>
+        </div>
+    </section>
+
+    <section class="slideshow-container">
+        <div class="slide">
+            <img src="slide1.jpg" style="width:100%">
+        </div>
+        <div class="slide">
+            <img src="slide2.jpg" style="width:100%">
+        </div>
+        <div class="slide">
+            <img src="slide3.jpg" style="width:100%">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Located in Cape Town, we are a family-run farm dedicated to providing sustainable and organic products. Our mission is to promote eco-friendly practices and contribute to a healthier environment.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to place an order? Get in touch with us!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cape Town Farm Products. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
